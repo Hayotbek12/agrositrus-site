@@ -2,12 +2,14 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  root: '.',              // <-- bu muhim
+  root: '.', // index.html shu papkada
+  base: './', // nisbiy yo'l
   plugins: [react()],
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
-      input: './index.html'  // <-- bu ham kerak
+      input: './index.html'
     }
   }
 })
